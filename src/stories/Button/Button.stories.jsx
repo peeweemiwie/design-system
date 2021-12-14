@@ -4,7 +4,6 @@ export default {
 	title: 'Form/Button',
 	component: Button,
 	argTypes: {
-		// backgroundColor: { control: 'color' },
 		variant: {
 			options: ['primary', 'secondary', 'success', 'danger'],
 			control: { type: 'radio' },
