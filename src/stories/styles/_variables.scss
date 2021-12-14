@@ -1,0 +1,99 @@
+@use 'sass:math';
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500&family=PT+Mono&family=Roboto+Mono:wght@100;200;300;400;500&family=Roboto:wght@100;300;400;500&display=swap';
+
+/* colors */
+$primary: #27d0ff;
+$secondary: #7a7a7a;
+$success: #22da93;
+$warning: #feb900;
+$danger: #f23557;
+$light: #eee;
+$dark: #1a1a1a;
+$white: white;
+$black: black;
+$gray: #414141;
+$light-gray: $secondary;
+$dark-gray: #202124;
+
+$text-dark: $dark;
+$text-light: $light;
+$body-bg: $dark;
+$card-bg: $dark-gray;
+
+$colors: (
+	'primary': $primary,
+	'success': $success,
+	'warning': $warning,
+	'danger': $danger,
+	'light': $light,
+	'white': $white,
+	'dark': $dark,
+	'black': $black,
+	'gray': $gray,
+	'light-gray': $light-gray,
+	'dark-gray': $dark-gray,
+);
+$colorsTheme: (
+	'primary': $primary,
+	'success': $success,
+	'warning': $warning,
+	'danger': $danger,
+);
+$colorsLight: (
+	'light': $light,
+	'white': $white,
+);
+$colorsDark: (
+	'dark': $dark,
+	'black': $black,
+	'gray': $gray,
+	'light-gray': $light-gray,
+	'dark-gray': $dark-gray,
+);
+
+$monsterrat: 'Montserrat', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+$base-font-size: 1.6rem;
+$font-xl: $base-font-size * 3;
+$font-lg: $base-font-size * 2;
+$font-md: $base-font-size * 1.5;
+$font-reg: $base-font-size;
+$font-sm: $base-font-size * 0.9;
+$font-xs: $base-font-size * 0.8;
+
+$fontSizes: (
+	'font-xl': $font-xl,
+	'font-lg': $font-lg,
+	'font-md': $font-md,
+	'font-reg': $font-reg,
+	'font-sm': $font-sm,
+	'font-xs': $font-xs,
+);
+
+//border-radius
+$sm: 4px;
+$md: $sm * 2;
+$lg: $sm * 3;
+$xl: $sm * 4;
+$round: 50%;
+
+$radius: (
+	'sm': $sm,
+	'md': $md,
+	'lg': $lg,
+	'xl': $xl,
+	'round': $round,
+);
+
+// borders
+$base-border-thickness: 1px;
+$base-border-radius: $sm;
+$base-border: $base-border-thickness solid $light-gray;
+$base-border-transparent: $base-border-thickness solid transparent;
+
+// spacing
+$base-unit: 0.8rem;
+$base-padding: $base-unit;
+$base-margin: $base-unit;
+$base-gap: $base-unit;

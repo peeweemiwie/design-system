@@ -1,0 +1,29 @@
+@use '../variables' as var;
+@use '../typography' as ty;
+@use '../fontSizes' as fs;
+
+.card {
+	background-color: var.$card-bg;
+	border-radius: var.$base-border-radius;
+	box-shadow: 8px 8px 10px rgba(var.$black, 0.5);
+	margin: (var.$base-margin * 2) 0 (var.$base-margin * 2);
+	padding: var.$base-padding * 1;
+	.card-section-title,
+	.card-title {
+		border-bottom: var.$base-border;
+		font-family: var.$monsterrat;
+		font-weight: 300;
+	}
+	.card-title {
+		font-size: var.$font-md;
+		margin: 0 0 (var.$base-padding * 2) 0;
+	}
+	.card-section-title {
+		font-size: var.$font-reg;
+		margin: (var.$base-padding * 1) 0 (var.$base-padding * 1) 0;
+	}
+	.card-body {
+		font-size: var.$font-reg;
+		margin: 0;
+	}
+}

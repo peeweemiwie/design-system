@@ -1,0 +1,60 @@
+@use '../styles/variables' as var;
+.btn {
+	background-color: transparent;
+	border: var.$base-border-transparent;
+	border-radius: var.$xl;
+	color: var.$white;
+	cursor: pointer;
+	display: inline-block;
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: var.$font-sm;
+	font-weight: 500;
+	line-height: 1;
+	padding: 0.8em 1.2em;
+	&--filled {
+		&-primary {
+			background-color: var.$primary;
+		}
+		&-secondary {
+			background-color: var.$secondary;
+		}
+		&-success {
+			background-color: var.$success;
+		}
+		&-danger {
+			background-color: var.$danger;
+		}
+	}
+	&--border {
+		background-color: transparent;
+		&-primary {
+			border-color: var.$primary;
+			color: var.$primary;
+		}
+		&-secondary {
+			border-color: var.$secondary;
+			color: var.$secondary;
+		}
+		&-success {
+			border-color: var.$success;
+			color: var.$success;
+		}
+		&-danger {
+			border-color: var.$danger;
+			color: var.$danger;
+		}
+	}
+	&--small {
+		font-size: var.$font-xs;
+	}
+	&--medium {
+		font-size: var.$font-sm;
+	}
+	&--large {
+		font-size: var.$font-reg;
+	}
+	&:disabled {
+		opacity: 0.5;
+		cursor: not-allowed;
+	}
+}

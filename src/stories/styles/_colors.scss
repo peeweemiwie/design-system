@@ -1,0 +1,13 @@
+@use './variables' as var;
+
+@each $key, $val in var.$colors {
+	.text-#{$key} {
+		color: #{$val};
+	}
+	.border-#{$key} {
+		border: var.$base-border-thickness solid #{$val};
+	}
+	.background-#{$key} {
+		background-color: #{$val};
+	}
+}

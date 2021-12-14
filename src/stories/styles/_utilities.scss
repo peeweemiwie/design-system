@@ -1,0 +1,188 @@
+@use 'sass:math';
+@use './variables' as var;
+
+$utilities: (
+	'padding': (
+		'prefix': 'p',
+		'values': (
+			0: 0,
+			1: var.$base-unit,
+			2: var.$base-unit * 2,
+			3: var.$base-unit * 3,
+			4: var.$base-unit * 4,
+			5: var.$base-unit * 5,
+			6: var.$base-unit * 6,
+		),
+	),
+	'padding-left': (
+		'prefix': 'pl',
+		'values': (
+			0: 0,
+			1: var.$base-unit,
+			2: var.$base-unit * 2,
+			3: var.$base-unit * 3,
+			4: var.$base-unit * 4,
+			5: var.$base-unit * 5,
+			6: var.$base-unit * 6,
+		),
+	),
+	'padding-top': (
+		'prefix': 'pt',
+		'values': (
+			0: 0,
+			1: var.$base-unit,
+			2: var.$base-unit * 2,
+			3: var.$base-unit * 3,
+			4: var.$base-unit * 4,
+			5: var.$base-unit * 5,
+			6: var.$base-unit * 6,
+		),
+	),
+	'padding-right': (
+		'prefix': 'pr',
+		'values': (
+			0: 0,
+			1: var.$base-unit,
+			2: var.$base-unit * 2,
+			3: var.$base-unit * 3,
+			4: var.$base-unit * 4,
+			5: var.$base-unit * 5,
+			6: var.$base-unit * 6,
+		),
+	),
+	'padding-bottom': (
+		'prefix': 'pb',
+		'values': (
+			0: 0,
+			1: var.$base-unit,
+			2: var.$base-unit * 2,
+			3: var.$base-unit * 3,
+			4: var.$base-unit * 4,
+			5: var.$base-unit * 5,
+			6: var.$base-unit * 6,
+		),
+	),
+	'margin': (
+		'prefix': 'm',
+		'values': (
+			0: 0,
+			1: var.$base-unit,
+			2: var.$base-unit * 2,
+			3: var.$base-unit * 3,
+			4: var.$base-unit * 4,
+			5: var.$base-unit * 5,
+			6: var.$base-unit * 6,
+		),
+	),
+	'margin-top': (
+		'prefix': 'mt',
+		'values': (
+			0: 0,
+			1: var.$base-unit,
+			2: var.$base-unit * 2,
+			3: var.$base-unit * 3,
+			4: var.$base-unit * 4,
+			5: var.$base-unit * 5,
+			6: var.$base-unit * 6,
+		),
+	),
+	'margin-right': (
+		'prefix': 'mr',
+		'values': (
+			0: 0,
+			1: var.$base-unit,
+			2: var.$base-unit * 2,
+			3: var.$base-unit * 3,
+			4: var.$base-unit * 4,
+			5: var.$base-unit * 5,
+			6: var.$base-unit * 6,
+		),
+	),
+	'margin-bottom': (
+		'prefix': 'mb',
+		'values': (
+			0: 0,
+			1: var.$base-unit,
+			2: var.$base-unit * 2,
+			3: var.$base-unit * 3,
+			4: var.$base-unit * 4,
+			5: var.$base-unit * 5,
+			6: var.$base-unit * 6,
+		),
+	),
+	'margin-left': (
+		'prefix': 'ml',
+		'values': (
+			0: 0,
+			1: var.$base-unit,
+			2: var.$base-unit * 2,
+			3: var.$base-unit * 3,
+			4: var.$base-unit * 4,
+			5: var.$base-unit * 5,
+			6: var.$base-unit * 6,
+		),
+	),
+	'gap': (
+		'prefix': 'g',
+		'values': (
+			0: 0,
+			1: var.$base-unit,
+			2: var.$base-unit * 2,
+			3: var.$base-unit * 3,
+			4: var.$base-unit * 4,
+			5: var.$base-unit * 5,
+			6: var.$base-unit * 6,
+		),
+	),
+	'column-gap': (
+		'prefix': 'cg',
+		'values': (
+			0: 0,
+			1: var.$base-unit,
+			2: var.$base-unit * 2,
+			3: var.$base-unit * 3,
+			4: var.$base-unit * 4,
+			5: var.$base-unit * 5,
+			6: var.$base-unit * 6,
+		),
+	),
+	'row-gap': (
+		'prefix': 'rg',
+		'values': (
+			0: 0,
+			1: var.$base-unit,
+			2: var.$base-unit * 2,
+			3: var.$base-unit * 3,
+			4: var.$base-unit * 4,
+			5: var.$base-unit * 5,
+			6: var.$base-unit * 6,
+		),
+	),
+	'display': (
+		'prefix': 'd',
+		'value': (
+			'flex': 'flex',
+			'block': 'block',
+			'i-flex': 'inline-flex',
+			'i-block': 'inline-block',
+		),
+	),
+);
+
+// generate utility classes
+@each $property, $map in $utilities {
+	$prefix: map-get($map, 'prefix');
+	$values: map-get($map, 'values');
+
+	@each $k, $v in $values {
+		@if ($k == 'default') {
+			.#{$prefix} {
+				#{$property}: $v;
+			}
+		} @else {
+			.#{$prefix}-#{$k} {
+				#{$property}: $v;
+			}
+		}
+	}
+}

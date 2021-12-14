@@ -1,0 +1,6 @@
+@use './variables' as var;
+@each $key, $val in var.$radius {
+	.border-radius-#{$key} {
+		border-radius: #{$val};
+	}
+}

@@ -1,0 +1,26 @@
+@use './variables' as var;
+
+// typography
+.h1,
+.h2,
+.h3 {
+	font-family: var.$monsterrat;
+	margin: 0;
+}
+.h1 {
+	font-size: var.$font-md;
+	font-weight: 300;
+}
+.h2 {
+	font-size: var.$font-sm;
+	font-weight: 300;
+}
+
+.strong {
+	font-weight: 500;
+}
+
+.section-header {
+	font-size: var.$font-reg;
+	font-weight: 300;
+}

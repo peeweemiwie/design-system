@@ -1,0 +1,71 @@
+@use '../variables' as var;
+@use '../typography' as ty;
+@use '../fontSizes' as fs;
+@use 'sass:math';
+
+.btn {
+	background-color: transparent;
+	border: var.$base-border-transparent;
+	border-radius: var.$base-border-radius;
+	cursor: pointer;
+	font-size: var.$font-sm;
+	padding: 0.8em 1.2em;
+}
+
+@each $key, $val in var.$colorsTheme {
+	.btn-#{$key} {
+		background-color: #{$val};
+		border-color: #{$val};
+		color: var.$white;
+	}
+	.btn-border-#{$key} {
+		border-color: #{$val};
+		color: #{$val};
+	}
+	.btn-underline-#{$key} {
+		border-radius: 0;
+		border-bottom-color: #{$val};
+		color: #{$val};
+	}
+	.btn-text-#{$key} {
+		color: #{$val};
+	}
+}
+@each $key, $val in var.$colorsDark {
+	.btn-#{$key} {
+		background-color: #{$val};
+		border-color: #{$val};
+		color: var.$white;
+	}
+	.btn-border-#{$key} {
+		border-color: #{$val};
+		color: #{$val};
+	}
+	.btn-underline-#{$key} {
+		border-radius: 0;
+		border-bottom-color: #{$val};
+		color: #{$val};
+	}
+	.btn-text-#{$key} {
+		color: #{$val};
+	}
+}
+@each $key, $val in var.$colorsLight {
+	.btn-#{$key} {
+		background-color: #{$val};
+		border-color: #{$val};
+		color: var.$dark;
+	}
+	.btn-border-#{$key} {
+		border-color: #{$val};
+		color: #{$val};
+	}
+	.btn-underline-#{$key} {
+		border-radius: 0;
+		border-bottom-color: #{$val};
+		color: #{$val};
+	}
+	.btn-text-#{$key} {
+		color: #{$val};
+	}
+}

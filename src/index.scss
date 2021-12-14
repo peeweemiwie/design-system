@@ -1,0 +1,13 @@
+@use './styles/variables' as var;
+body {
+	background-color: var.$body-bg;
+	color: var.$white;
+	font-family: var.$roboto;
+	* {
+		box-sizing: border-box;
+	}
+
+	html {
+		font-size: 10px; // 1rem === 10px
+	}
+}

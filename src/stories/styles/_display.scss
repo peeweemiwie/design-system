@@ -1,0 +1,27 @@
+@use './variables' as var;
+
+$displays: (
+	'flex': 'flex',
+	'block': 'block',
+	'inline': 'inline',
+	'i-flex': 'inline-flex',
+	'i-block': 'inline-block',
+);
+
+$directions: (
+	'row': 'row',
+	'r-reverse': 'row-reverse',
+	'col': 'column',
+	'c-reverse': 'column-reverse',
+);
+
+@each $key, $val in $displays {
+	.d-#{$key} {
+		display: #{$val};
+	}
+}
+@each $key, $val in $directions {
+	.flex-dir-#{$key} {
+		flex-direction: #{$val};
+	}
+}
